@@ -8,7 +8,7 @@ Système complet de surveillance et tracking multi-caméras avec ré-identificat
 
 ```
 PROJET/
-├── multiTracking/                    # Module principal de tracking multi-caméras
+├── multitrack/                    # Module principal de tracking multi-caméras
 │   ├── main.py                  # Point d'entrée CLI
 │   ├── object_detector.py       # Détection YOLOv8
 │   ├── object_tracker.py        # Tracking ByteTrack/BoT-SORT
