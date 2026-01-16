@@ -1,0 +1,26 @@
+# Multi-Camera Tracking System - Requirements
+# Python 3.10+ required
+
+# Core dependencies
+opencv-python>=4.8.0
+numpy>=1.24.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Object Detection & Tracking
+ultralytics>=8.0.0           # YOLOv8
+
+# Re-Identification
+torchreid>=0.2.5             # OSNet ReID model
+tensorboard>=2.10.0          # Required by torchreid
+
+# Pose Estimation (optional)
+mediapipe>=0.10.0            # MediaPipe pose
+
+# Download utilities
+gdown>=4.7.0                 # For downloading pretrained weights
+
+# Utilities
+scipy>=1.10.0
+pyyaml>=6.0
+tqdm>=4.65.0
