@@ -1,0 +1,64 @@
+# Configuration Multi-Caméras
+# Ce fichier définit les sources vidéo et les paramètres de synchronisation
+
+cameras:
+  # Caméras depuis fichiers locaux (pour test/démo)
+  - camera_id: "cam_devanture_porte"
+    name: "Devanture - Porte"
+    location: "Devanture - Porte Entrée"
+    source: "Dataset/CAMERA_DEVANTURE_PORTE_ENTREE.mp4"
+    
+  - camera_id: "cam_devanture_arbre"
+    name: "Devanture - Arbre"
+    location: "Devanture - Sous Arbre"
+    source: "Dataset/CAMERA_DEVANTURE_SOUS_ARBRE.mp4"
+    
+  - camera_id: "cam_hall_entree"
+    name: "Hall - Entrée"
+    location: "Hall - Porte Entrée"
+    source: "Dataset/CAMERA_HALL_PORTE_ENTREE.mp4"
+    
+  - camera_id: "cam_hall_droite"
+    name: "Hall - Droite"
+    location: "Hall - Porte Droite"
+    source: "Dataset/CAMERA_HALL_PORTE_DROITE.MP4"
+
+  # Exemple de caméras RTSP (décommenter pour utiliser)
+  # - camera_id: "cam_rtsp_1"
+  #   name: "Caméra IP 1"
+  #   location: "Entrée principale"
+  #   source: "rtsp://192.168.1.100:554/stream1"
+  #   username: "admin"
+  #   password: "password123"
+  #   transport: "tcp"
+
+# Paramètres de synchronisation
+sync:
+  target_fps: 25
+  max_drift_ms: 100
+  method: "timestamp"  # timestamp, audio, visual
+  buffer_size: 30
+
+# Paramètres de stockage
+storage:
+  base_path: "output"
+  metadata_db: "metadata.db"
+  days_to_keep: 30
+  
+# Paramètres d'affichage
+display:
+  grid_cols: 2
+  grid_rows: 2
+  cell_width: 640
+  cell_height: 480
+  show_timestamps: true
+  show_camera_names: true
+
+# Paramètres de monitoring
+monitoring:
+  check_interval: 1.0
+  fps_min_ratio: 0.8
+  max_latency_ms: 500
+  max_sync_drift_ms: 100
+  max_drop_rate: 0.05
+  offline_timeout_s: 5.0

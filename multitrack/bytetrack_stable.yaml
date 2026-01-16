@@ -1,0 +1,19 @@
+# ByteTrack configuration optimisée pour une meilleure persistance des IDs
+# Voir: https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/trackers/bytetrack.yaml
+
+tracker_type: bytetrack
+
+# Paramètres de matching
+track_high_thresh: 0.5    # Seuil de détection confiance haute
+track_low_thresh: 0.1     # Seuil bas pour réassocier les tracks perdus
+new_track_thresh: 0.6     # Seuil pour créer un nouveau track
+
+# Persistance des tracks - AUGMENTÉE pour meilleure stabilité
+track_buffer: 60          # Frames à garder un track sans détection (défaut: 30)
+
+# Matching
+match_thresh: 0.8         # Seuil IoU pour association (plus bas = plus tolérant)
+fuse_score: True          # Fusionner score de confiance avec IoU
+
+# Paramètres de prédiction Kalman
+# Permet de prédire la position même sans détection

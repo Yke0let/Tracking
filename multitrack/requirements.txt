@@ -1,0 +1,14 @@
+# Dépendances du système de surveillance multi-caméras
+
+# Core
+opencv-python>=4.5.0
+numpy>=1.20.0
+
+# Audio sync (optionnel)
+scipy>=1.7.0
+
+# Configuration
+pyyaml>=5.4.0
+
+# Pour le développement
+pytest>=6.0.0

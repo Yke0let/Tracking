@@ -1,0 +1,27 @@
+# Configuration des timestamps manuels pour la synchronisation
+# Format: nom_fichier (partiel) -> heure de début (HH:MM:SS)
+
+# Les noms peuvent être partiels - le système cherchera les correspondances
+
+MANUAL_START_TIMES:
+  # Première vague de caméras (12:09 - 12:10)
+  HALL_PORTE_DROITE: "12:09:23"
+  HALL_PORTE_GAUCHE: "12:09:57"
+  DEBUT_COULOIR_DROIT: "12:09:57"  # Synchronisé avec HALL_PORTE_GAUCHE
+  DEVANTURE_SOUS_ARBRE: "12:10:02"
+  FIN_COULOIR_GAUCHE_REZ_PARTIE_2: "12:10:03"  # DEBUT
+  FIN_COULOIR_DROIT: "12:10:08"
+  HALL_PORTE_ENTREE: "12:10:28"
+  DEVANTURE_PORTE_ENTREE: "12:10:37"
+  
+  # Deuxième vague (12:17+)
+  FIN_COULOIR_GAUCHE_REZ_PARTIE_1: "12:17:33"  # FIN
+
+# Cameras à exclure (doublons ou non utilisées)
+EXCLUDE_PATTERNS:
+  - "PARTIE_1(1)"  # Doublon
+  - "ESCALIER"     # Non listée
+  - "ETAGE1"       # Non listée
+
+# Date de référence (YYYY-MM-DD)
+REFERENCE_DATE: "2025-12-11"
